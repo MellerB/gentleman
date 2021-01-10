@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import TopBar from "./components/TopBar"
+import ProductList from './components/ProductList';
 
 ReactDOM.render(
   <React.StrictMode>
     <TopBar/>
+    <ProductList/>
   </React.StrictMode>,
   document.getElementById('root')
 );
