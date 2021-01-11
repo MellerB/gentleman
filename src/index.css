@@ -16,6 +16,47 @@ div{
   display: block;
 }
 
-#menu-bar li{
+.left-menu-bar li, .right-menu-bar li, .logo-menu-bar li{
   display: inline-block;
+  text-transform: uppercase;
+}
+
+.left-menu-bar li div, .right-menu-bar li div, .logo-menu-bar li div{
+  padding:10px;
+  height: 100%;
+  letter-spacing: 1px;
+}
+
+.left-menu-bar li a:hover, .right-menu-bar li a:hover, .logo-menu-bar li a:hover{
+  color:rgb(143, 86, 0);
+}
+
+.right-menu-bar{
+  left:50%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+
+.left-menu-bar{
+  right:50%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.logo-menu-bar{
+  left:50%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+ul{
+  position: absolute;
+  display:block;
 }

@@ -35,7 +35,8 @@ export default class ProductList extends React.Component {
                 origin: "chyba szkocja",
                 price: 3.50,
                 imageURL: "https://smaczajama.pl/userdata/public/gfx/a8f6bd71f68ed70a7adc9eacdaf5fa02.jpg"
-            },{
+            },
+            {
                 name: "Jacek Daniel",
                 age: 12,
                 type: "burbon",
