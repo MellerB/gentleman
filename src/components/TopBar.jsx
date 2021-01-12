@@ -1,6 +1,8 @@
 import React from "react"
 import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg";
 import {ReactComponent as GentlemanIcon} from "../assets/gentleman-icon.svg";
+import GentlemanLogo from "../images/gentleman-logo.png";
+import CartIconJPG from "../images/cart.jpg";
 
 // var menu_button_width = document.getElementById("cart-menu").style.width;
 
@@ -14,17 +16,17 @@ export default class TopBar extends React.Component {
             <ul class="left-menu-bar" style={{}}>
 
               <li>
-                <a href="#" id="menu-logo" style={{height: "100%"}}>
+                <a href="#" style={{height: "100%"}}>
                   <div>
                     Home
                     {/* <GentlemanIcon style={{height: "100%",display:"block"}}/> */}
-                    {/* <img src="../images/cart.jpg" ></img> */}
+                     
                   </div>
                   
                 </a>
               </li>
               <li>
-                <a href="#" id="menu-cart" style={{height: "100%"}}>
+                <a href="#" style={{height: "100%"}}>
                   <div>
                     Dzień
                     {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
@@ -33,7 +35,7 @@ export default class TopBar extends React.Component {
                 </a>
               </li>
               <li>
-                <a href="#" id="menu-cart" style={{height: "100%"}}>
+                <a href="#" style={{height: "100%"}}>
                   <div>
                     Dobry
                     {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
@@ -45,15 +47,16 @@ export default class TopBar extends React.Component {
             <ul class="logo-menu-bar">
               <li>
                 <a href="#">
-                {/* <GentlemanIcon style={{height: "100%",display:"block"}}/> */}
-                <CartIcon style={{height: "100%",display:"block"}}/>
+                {/* <GentlemanIcon style={{height: "100%"}}/> */}
+                
+                <img  alt="Logo" src={GentlemanLogo} style={{height: "60px"}}></img> 
                 </a>
               </li>
             </ul>
             <ul class="right-menu-bar" style={{}}>
 
               <li>
-                <a href="#" id="menu-logo" style={{height: "100%"}}>
+                <a href="#" style={{height: "100%"}}>
                   <div>
                     Wieczór
                     {/* <GentlemanIcon style={{height: "100%",display:"block"}}/> */}
@@ -64,7 +67,7 @@ export default class TopBar extends React.Component {
               </li>
               
               <li>
-                <a href="#" id="menu-cart" style={{height: "100%"}}>
+                <a href="#" style={{height: "100%"}}>
                   <div>
                     Kontakt
                     {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
@@ -74,15 +77,24 @@ export default class TopBar extends React.Component {
               </li>
 
               <li>
-                <a href="#" id="menu-cart" style={{height: "100%"}}>
-                  <div>
-                  <CartIcon style={{height: "100%",display:"block"}}/>
-                    {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
-                  </div>
+                <a href="#" style={{height: "100%"}}>
+                  
+                    {/* <img  alt="Logo" src={GentlemanLogo} style={{height: "60px"}}></img>  */}
+                  {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
+                  
                   
                 </a>
               </li>
               </ul>
+              <ul class="cart-menu-bar">
+              <li>
+                <a href="#">
+                {/* <GentlemanIcon style={{height: "100%"}}/> */}
+                
+                <img  alt="Logo" src={CartIconJPG} style={{height: "60px"}}></img> 
+                </a>
+              </li>
+            </ul>
             
           </nav>
         </header>
