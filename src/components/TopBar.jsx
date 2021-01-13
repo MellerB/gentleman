@@ -90,8 +90,7 @@ export default class TopBar extends React.Component {
               <li>
                 <a href="#">
                 {/* <GentlemanIcon style={{height: "100%"}}/> */}
-                
-                <img  alt="Logo" src={CartIconJPG} style={{height: "60px"}}></img> 
+                <CartIcon style={{height: "40px", margin: "10px"}}/> 
                 </a>
               </li>
             </ul>
