@@ -12,7 +12,7 @@ export default class TopBar extends React.Component {
     render() {
       return (
         <header>
-          <nav style={{height: "60px", width: "100%", position: "fixed",backgroundColor: "#dddddd",margin: "auto",top:0}}>
+          <nav style={{height: "60px", width: "100%", position: "fixed",backgroundColor: "#eeeedf",margin: "auto",top:0}}>
             <ul class="left-menu-bar" style={{}}>
 
               <li>
@@ -28,16 +28,7 @@ export default class TopBar extends React.Component {
               <li>
                 <a href="#" style={{height: "100%"}}>
                   <div>
-                    Dzień
-                    {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
-                  </div>
-                  
-                </a>
-              </li>
-              <li>
-                <a href="#" style={{height: "100%"}}>
-                  <div>
-                    Dobry
+                    Dzień dobry
                     {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
                   </div>
                   
@@ -47,9 +38,8 @@ export default class TopBar extends React.Component {
             <ul class="logo-menu-bar">
               <li>
                 <a href="#">
-                {/* <GentlemanIcon style={{height: "100%"}}/> */}
+                <GentlemanIcon style={{height: "50px",padding:"5px"}}/>
                 
-                <img  alt="Logo" src={GentlemanLogo} style={{height: "60px"}}></img> 
                 </a>
               </li>
             </ul>
@@ -59,8 +49,6 @@ export default class TopBar extends React.Component {
                 <a href="#" style={{height: "100%"}}>
                   <div>
                     Wieczór
-                    {/* <GentlemanIcon style={{height: "100%",display:"block"}}/> */}
-                    {/* <img src="../images/cart.jpg" ></img> */}
                   </div>
                   
                 </a>
@@ -70,27 +58,16 @@ export default class TopBar extends React.Component {
                 <a href="#" style={{height: "100%"}}>
                   <div>
                     Kontakt
-                    {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
                   </div>
                   
                 </a>
               </li>
 
-              <li>
-                <a href="#" style={{height: "100%"}}>
-                  
-                    {/* <img  alt="Logo" src={GentlemanLogo} style={{height: "60px"}}></img>  */}
-                  {/* <CartIcon style={{height: "100%",display:"block"}}/> */}
-                  
-                  
-                </a>
-              </li>
               </ul>
               <ul class="cart-menu-bar">
               <li>
                 <a href="#">
-                {/* <GentlemanIcon style={{height: "100%"}}/> */}
-                <CartIcon style={{height: "40px", margin: "10px"}}/> 
+                <CartIcon style={{height: "40px", padding: "10px"}}/> 
                 </a>
               </li>
             </ul>

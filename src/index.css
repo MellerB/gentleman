@@ -24,7 +24,8 @@ div{
 .left-menu-bar li div, .right-menu-bar li div, .logo-menu-bar li div{
   padding: 20px 10px 10px 10px;
   height: 100%;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  word-spacing: 2px;
 }
 
 .left-menu-bar li a:hover, .right-menu-bar li a:hover, .logo-menu-bar li a:hover{
@@ -64,4 +65,8 @@ a{
 ul{
   position: absolute;
   display:block;
+}
+
+header svg:hover{
+  fill: rgb(143, 86, 0);
 }
