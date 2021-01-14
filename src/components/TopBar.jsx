@@ -1,9 +1,8 @@
-import React from "react"
+import React from "react";
 import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg";
 import {ReactComponent as GentlemanIcon} from "../assets/gentleman-icon.svg";
-import GentlemanLogo from "../images/gentleman-logo.png";
-import CartIconJPG from "../images/cart.jpg";
-import NavListItem from "./NavListItem"
+import NavListItem from "./NavListItem";
+import NavListIcon from "./NavListIcon"
 
 // var menu_button_width = document.getElementById("cart-menu").style.width;
 
@@ -31,7 +30,8 @@ export default class TopBar extends React.Component {
               </ul>
               <ul class="cart-menu-bar">
               <li>
-                <CartIcon style={{height: "40px", padding: "10px"}}/> 
+                {/* <CartIcon style={{height: "40px", padding: "10px"}}/>  */}
+                <NavListIcon img={CartIcon}/>
               </li>
             </ul>
             
