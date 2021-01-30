@@ -51,11 +51,12 @@ export default class ProductList extends React.Component {
                 origin: "chyba szkocja",
                 price: 3.50,
                 imageURL: "https://smaczajama.pl/userdata/public/gfx/a8f6bd71f68ed70a7adc9eacdaf5fa02.jpg"
-            },
+            }
         ]
     }
 
     render() { 
+        console.log(this.state.items)
       return (
       <div style={{height: "20px", width: "50%", margin: "auto"}}>
           {this.state.items.map(item => <ProductListItem item={item}/>)}
