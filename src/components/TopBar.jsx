@@ -30,7 +30,7 @@ export default class TopBar extends React.Component {
               </ul>
               <ul class="cart-menu-bar">
               <li>
-                {/* <CartIcon style={{height: "40px", padding: "10px"}}/>  */}
+                <CartIcon style={{height: "40px", padding: "10px"}}/> 
                 <NavListIcon img={CartIcon}/>
               </li>
             </ul>
