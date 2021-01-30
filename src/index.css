@@ -28,7 +28,7 @@ div{
   word-spacing: 2px;
 }
 
-.left-menu-bar li a:hover, .right-menu-bar li a:hover, .logo-menu-bar li a:hover{
+.left-menu-bar li:hover, .right-menu-bar li:hover, .logo-menu-bar li:hover{
   color:rgb(143, 86, 0);
 }
 
@@ -42,13 +42,13 @@ div{
 .left-menu-bar{
   right:50%;
   margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  padding: 0 0px 0px 0;
 }
 
 .logo-menu-bar{
   left:50%;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0 0px 0 0px;
+  padding: 0 0px 0 0px;
 }
 
 .cart-menu-bar{
