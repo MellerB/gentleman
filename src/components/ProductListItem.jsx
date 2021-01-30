@@ -3,7 +3,7 @@ import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg";
 
 export default class ProductListItem extends React.Component {
     render() {
-        const item = this.props.item 
+        const item = {...this.props.item}
         if(item.age)
         {
             item.age = item.age.toString() + " lat"
