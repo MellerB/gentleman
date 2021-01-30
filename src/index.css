@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.product{
+  font-family: Andale Mono, monospace
+}
+
 div{
   display: block;
 }
