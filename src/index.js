@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import TopBar from "./components/TopBar"
-import ProductList from './components/ProductList';
-
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import Cart from './components/Cart'
+import './index.css';
+
+import TopBar from "./components/TopBar"
+import Main from './pages/Main'
+import Cart from './pages/Cart'
 
 
 ReactDOM.render(
@@ -15,7 +14,7 @@ ReactDOM.render(
     <TopBar/>
     <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={ProductList} />
+                <Route exact path="/" component={Main} />
                 <Route exact path="/cart" component={Cart} />
             </Switch>
         </BrowserRouter>
@@ -24,5 +23,3 @@ ReactDOM.render(
   document.querySelector('body')
 );
 
-
-reportWebVitals();
