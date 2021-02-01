@@ -1,5 +1,5 @@
 import React from "react"
-import { ReactComponent as CartIcon } from "../assets/shopping-cart.svg";
+import { ContentCartIcon } from "./AddItemIcon";
 
 
 
@@ -24,8 +24,8 @@ export default class ProductListItem extends React.Component {
             <h3 style={{margin: "5px"}}>wiek: {item.age}</h3>
             <h3 style={{margin: "5px"}}>cena: {item.price} zł</h3>
         </div>
-        <div className="clickable-icon" style={{float: "right",width: "10%",height:"100%",boder:"solid #C7A82B 2px"}}>
-        <CartIcon style={{width: "100%", marginTop:"100px",  transform: "translate(-20px, -50%)"}} onClick={() => this.props.onItemClick(item.id)}/>
+        <div className="clickable-icon clickable" style={{float: "right",width: "10%",height:"100%",boder:"solid #C7A82B 2px"}}>
+        <ContentCartIcon id={item.id} onClick={this.props.onItemClick}/>
         </div>
         </div>
     )

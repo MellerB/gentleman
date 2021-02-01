@@ -37,6 +37,12 @@ export const removeItem = (id) =>
     }
 }
 
+export const getItemsAmount = () =>
+{
+    let tab = getCookieJson()
+    return tab.reduce((a, b) => +a + +b.count, 0);
+}
+
 const setCookieJson = (cookie) =>
 {
     const json = JSON.stringify(cookie); 
