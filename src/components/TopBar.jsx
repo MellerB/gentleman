@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg";
+import {ContentCartIcon} from "./ContentCartIcon";
 import {ReactComponent as GentlemanIcon} from "../assets/gentleman-icon.svg";
 import NavListItem from "./NavListItem";
 import {withRouter} from "react-router-dom"
@@ -22,7 +22,7 @@ class TopBar extends React.Component {
             </ul>
 
             <div onClick={() => this.props.history.push('/cart')} className="clickable-icon" style={{position: "absolute", right:0, top:0}}>
-                <CartIcon  style={{padding:"5px",height: "50px"}}/> 
+                <ContentCartIcon  style={{position: "absolute", right: "0px", top:"0px", padding:"5px",height: "50px"}}/> 
             </div>
           </nav>
           

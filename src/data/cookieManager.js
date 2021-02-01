@@ -1,57 +1,41 @@
-
-export const testCookies = () =>
+export const addItem = (id) =>
 {
-    setCookieJson([
-        {id: 1, count: 2},
-        {id: 2, count: 1},
-    {id: 3, count: 12},
-    ])
-    
-
-    addItem(4)
-    //removeItem(2)
-    console.log(getCookieJson())
-}
-
-const addItem = (id) =>
-{
-
     let tab = getCookieJson()
 
-    const element = tab.filter((el) => el.id==id)[0]
+    const element = tab.filter((el) => el.id === id)[0]
 
     if(element)
     {
-    const index = tab.findIndex((el) => el===element)
-
+    const index = tab.findIndex((el) => el === element)
     tab[index] = {id: element.id, count: element.count+1}
-
-
     }
     else{
         tab.push({id:id,count:1})
     }
     setCookieJson(tab)
+    console.log(getCookieJson())
 }
 
-/*const removeItem = (id) =>
+export const removeItem = (id) => 
 {
-
     let tab = getCookieJson()
-
-    const element = tab.filter((el) => el.id==id)[0]
-
+    const element = tab.filter((el) => el.id === id)[0]
     if(element)
     {
-    const index = tab.findIndex((el) => el===element)
+        const index = tab.findIndex((el) => el === element)
+        if(element.count <= 1)
+        {
+            tab.splice(index,1)
+        }
+        else
+        {
+            tab[index].count-=1
+        }
 
-    tab.pop(index)
-
-    setCookieJson(tab)
+        
+        setCookieJson(tab)
     }
-
-}*/
-//SHOULD BE DONE AGAIN
+}
 
 const setCookieJson = (cookie) =>
 {
@@ -60,5 +44,13 @@ const setCookieJson = (cookie) =>
 }
 
 const getCookieJson = () =>{
-    return JSON.parse(document.cookie)
+    if(document.cookie)
+    {
+        return JSON.parse(document.cookie)
+    }
+    else
+    {
+        return []
+    }
+    
 }
