@@ -4,9 +4,12 @@ import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg";
 export default class ProductListItem extends React.Component {
     render() {
         const item = {...this.props.item}
-        if(item.age)
+        if(["2","3","4"].includes(item.age.toString()[item.age.toString().length-1]) && item.age.toString()[item.age.toString().length-2]!=="1")
         {
-            item.age = item.age.toString() + " lat"
+            item.age = item.age.toString() + " lata"
+        }
+        else{
+          item.age = item.age.toString() + " lat"
         }
 
       return (
