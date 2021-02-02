@@ -1,6 +1,6 @@
 import React from "react"
 
-export default class PurchaseListItem extends React.Component {
+export default class CartOrderData extends React.Component {
     state = {
         count: 1
     }
