@@ -20,15 +20,15 @@ export default class PurchaseListItem extends React.Component {
         }
 
         return (
-            <div style={{ height: "200px", margin: "10px", border: "solid #C7A82B 2px", backgroundColor: "#eeeedf" }}>
+            <div style={{ height: "140px", margin: "10px", border: "solid #C7A82B 2px", backgroundColor: "#eeeedf",display:"flex"}}>
                 <img style={{ float: "left", height: "100%", width: "15%", backgroundColor: "#eeeedf", borderRight: "solid #C7A82B 2px", objectFit: "cover" }} src={item.imageURL} alt="noice whiskey" />
                 <div class="product" style={{ paddingLeft: "5px", float: "left", height: "100%", width: "60%", color: "rgb(143, 86, 100)" }}>
-                    <h2>{item.name} </h2>
-                    <h3 style={{ margin: "5px" }}>cena za sztukę: {item.price} zł</h3>
-                    <h3 style={{ margin: "5px" }}>cena w sumie: <span id="suma">{this.state.count * item.price}</span> zł</h3>
+                    <h3>{item.name} </h3>
+                    <h4 style={{ margin: "5px" }}>cena za sztukę: {item.price} zł</h4>
+                    <h4 style={{ margin: "5px" }}>cena w sumie: <span id="suma">{this.state.count * item.price}</span> zł</h4>
                 </div>
 
-                <div style={{ float: "right", width: "20%", boder: "solid #C7A82B 2px", marginTop: "100px", textAlign:"center"}}>
+                <div style={{ float: "right", width: "20%", boder: "solid #C7A82B 2px", marginTop: "20px", textAlign:"center"}}>
                     <ArrowDown onClick={() => changeSum(1)} style={{width:"40px", height:"40px",transform: "rotate(180deg)"}}/>
                         <div>{this.state.count}</div>
                     {this.state.count > 1 ? 
