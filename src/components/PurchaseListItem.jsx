@@ -4,13 +4,23 @@ import {ReactComponent as Cross} from "../assets/cross.svg";
 
 export default class PurchaseListItem extends React.Component {
     state = {
-        count: 1
+        count: this.props.item.amount
+    }
+
+    add = () =>
+    {
+        this.props.item.add()
+        this.setState({count: this.props.item.amount})
+        this.props.amountChanged()
+    }
+
+    remove = () =>
+    {
+        this.props.item.remove()
+        this.setState({count: this.props.item.amount})
+        this.props.amountChanged()
     }
     render() {
-        const changeSum = (d) =>{
-            this.setState({ count: this.state.count + d })
-        } 
-        
         const item = { ...this.props.item }
         if (["2", "3", "4"].includes(item.age.toString()[item.age.toString().length - 1]) && item.age.toString()[item.age.toString().length - 2] !== "1") {
             item.age = item.age.toString() + " lata"
@@ -29,12 +39,12 @@ export default class PurchaseListItem extends React.Component {
                 </div>
 
                 <div style={{ float: "right", width: "20%", boder: "solid #C7A82B 2px", marginTop: "20px", textAlign:"center"}}>
-                    <ArrowDown onClick={() => changeSum(1)} style={{width:"40px", height:"40px",transform: "rotate(180deg)"}}/>
+                    <ArrowDown onClick={this.add} style={{width:"40px", height:"40px",transform: "rotate(180deg)"}}/>
                         <div>{this.state.count}</div>
                     {this.state.count > 1 ? 
-                    <ArrowDown onClick={() => changeSum(-1)} style={{width:"40px", height:"40px"}}/>
+                    <ArrowDown onClick={this.remove} style={{width:"40px", height:"40px"}}/>
                     :
-                    <Cross onClick={() => changeSum(-1)} style={{marginTop: "6px", marginLeft: "1px",fill: "red",width:"20px", height:"20px"}}/>
+                    <Cross onClick={this.remove} style={{marginTop: "6px", marginLeft: "1px",fill: "red",width:"20px", height:"20px"}}/>
                 }
                     </div>
 

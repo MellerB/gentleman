@@ -1,17 +1,14 @@
 import React from "react"
 
 export default class CartOrderData extends React.Component {
-    state = {
-        count: 1
-    }
-    render() {
 
+    render() {
         return (
             <div style={{ width: "40%", right: "10%", border: "solid #C7A82B 2px", padding: "15px 15px 15px 15px", backgroundColor: "#eeeedf", position: "fixed" }}>
                 <div style={{ border: "solid #C7A82B 1px", padding: " 15px" }}>
-                    <h4>Cena za produkty: <span></span></h4>
-                    <h4>Koszt wysyłki:<span></span></h4>
-                    <h4>Suma:<span></span></h4>
+                    <h4>Cena za produkty: <span>{this.props.sum}</span></h4>
+                    <h4>Koszt wysyłki: <span style={{color:"green"}}>Gratis!!!</span></h4>
+                    <h4>Suma: <span>{this.props.sum}</span></h4>
                 </div>
 
                 <div style={{ border: "solid #C7A82B 1px", padding: " 15px", lineHeight:"200%", marginTop:"15px"}}>
