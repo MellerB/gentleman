@@ -23,7 +23,7 @@ class TopBar extends React.Component {
             </ul>
 
             <div onClick={() => this.props.history.push('/cart')} className="clickable-icon" style={{position: "absolute", right:0, top:0}}>
-                <ContentCartIcon/> 
+                <ContentCartIcon amount={this.props.amount}/> 
             </div>
           </nav>
           
