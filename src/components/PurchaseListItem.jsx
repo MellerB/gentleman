@@ -4,21 +4,21 @@ import {ReactComponent as Cross} from "../assets/cross.svg";
 
 export default class PurchaseListItem extends React.Component {
     state = {
-        count: this.props.item.amount
+        count: this.props.item.getAmount()
     }
 
     add = () =>
     {
         this.props.item.add()
-        this.setState({count: this.props.item.amount})
         this.props.amountChanged()
+        this.setState({count: this.props.item.getAmount()})
     }
 
     remove = () =>
     {
         this.props.item.remove()
-        this.setState({count: this.props.item.amount})
         this.props.amountChanged()
+        this.setState({count: this.props.item.getAmount()})
     }
     render() {
         const item = { ...this.props.item }

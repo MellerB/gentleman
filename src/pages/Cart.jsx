@@ -14,7 +14,7 @@ export default class Cart extends React.Component {
       <div style={{ height: "20px", width: "30%", marginLeft: "10%" }}>
         {items.map(item => <PurchaseListItem key={item.id} item={item} amountChanged={this.props.amountChanged}/>)}
       </div>
-        <OrderData sum={this.props.sum}/>
+        <OrderData sum={this.props.sum} amountChanged={this.props.amountChanged}/>
       </div>
       
     );

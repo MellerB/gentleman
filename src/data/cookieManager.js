@@ -16,13 +16,13 @@ export const getSummaryPrice = () =>
     const items = getProducts()
     console.log(items)
     items.forEach(item => {
-        t= t + item.price * item.amount
+        t= t + item.price * item.getAmount()
     });
     console.log(t)
     return t 
 }
 
-const makeProductObject = (product, amount) => 
+const makeProductObject = (product) => 
 {
     return {
     id: product.id,
@@ -33,7 +33,7 @@ const makeProductObject = (product, amount) =>
     imageURL: product.imageURL,
     remove: () => removeItem(product.id),
     add: () => addItem(product.id),
-    amount: getItemsCount(product.id)
+    getAmount: () => getItemsCount(product.id)
     }
 }
 
@@ -87,7 +87,7 @@ export const getItemsAmount = () =>
     return tab.reduce((a, b) => +a + +b.count, 0);
 }
 
-const setCookieJson = (cookie) =>
+export const setCookieJson = (cookie) =>
 {
     const json = JSON.stringify(cookie); 
     document.cookie = json

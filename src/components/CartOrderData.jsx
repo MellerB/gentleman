@@ -1,17 +1,22 @@
 import React from "react";
 import {ReactComponent as RubbishBin} from "../assets/rubbish-bin.svg";
+import {setCookieJson} from "../data/cookieManager";
 
 export default class CartOrderData extends React.Component {
+
+    removeAllItems = () => 
+    {
+        setCookieJson([])
+        this.props.amountChanged()
+    }
 
     render() {
         return (
             <div style={{ width: "40%", right: "10%", border: "solid #C7A82B 2px", padding: "15px 15px 15px 15px", backgroundColor: "#eeeedf", position: "fixed" }}>
                 <div style={{ border: "solid #C7A82B 1px", padding: " 15px" }}>
-
-                    <div className="clickable-icon">
                         
-                        <RubbishBin style={{float:"right", width:"50px",height:"50px"}}/>
-                    </div>
+                        <RubbishBin onClick={this.removeAllItems} className="clickable-icon" style={{float:"right", width:"50px",height:"50px"}}/>
+                    
                 
                     <h4>Cena za produkty: <span>{this.props.sum}</span></h4>
                     <h4>Koszt wysyłki: <span style={{color:"green"}}>Gratis!!!</span></h4>
@@ -32,7 +37,7 @@ export default class CartOrderData extends React.Component {
                         <a>Kod pocztowy<input type="text" placeholder="XX" maxlength="2" size="1" id="postCode1" oninput="checkPostCode1()" />-<input type="text" placeholder="XXX" maxlength="3" size="1" id="postCode2" oninput="checkPostCode2()" /></a><br/>
                         <a>Ulica<input type="text" id="street" placeholder="Mickiewicza" /></a><br/>
                         <a>Nr domu/mieszkania<input type="text" placeholder="dom" size="1" id="house" />/<input type="text" placeholder="lokal" size="1" id="flat" /></a>
-                        <button style={{float:"right",backgroundColor: "black",color:"white",borderRadius:"5px"}}>Zamawiam!</button>
+                        <button onClick={console.log(this.items)} style={{float:"right",backgroundColor: "black",color:"white",borderRadius:"5px"}}>Zamawiam!</button>
                     </div>
                     
                 </div>
