@@ -1,14 +1,14 @@
 import React from "react"
 import {ReactComponent as ArrowDown} from "../assets/Arrow-down.svg";
+import {ReactComponent as Cross} from "../assets/cross.svg";
 
 export default class PurchaseListItem extends React.Component {
     state = {
-        ilosc: 1
+        count: 1
     }
     render() {
-        const changeSum = (valueD) =>{
-            if(this.state.ilosc==1 && valueD==-1)   window.alert('Jeśli chcesz usunąć ostatnią sztukę, kliknij na kosz')
-            else                                    this.setState({ ilosc: this.state.ilosc += valueD })
+        const changeSum = (d) =>{
+            this.setState({ count: this.state.count + d })
         } 
         
         const item = { ...this.props.item }
@@ -25,14 +25,18 @@ export default class PurchaseListItem extends React.Component {
                 <div class="product" style={{ paddingLeft: "5px", float: "left", height: "100%", width: "60%", color: "rgb(143, 86, 100)" }}>
                     <h2>{item.name} </h2>
                     <h3 style={{ margin: "5px" }}>cena za sztukę: {item.price} zł</h3>
-                    <h3 style={{ margin: "5px" }}>cena w sumie: <span id="suma">{this.state.ilosc * item.price}</span> zł</h3>
+                    <h3 style={{ margin: "5px" }}>cena w sumie: <span id="suma">{this.state.count * item.price}</span> zł</h3>
                 </div>
 
                 <div style={{ float: "right", width: "20%", boder: "solid #C7A82B 2px", marginTop: "100px", textAlign:"center"}}>
                     <ArrowDown onClick={() => changeSum(1)} style={{width:"40px", height:"40px",transform: "rotate(180deg)"}}/>
-                        <div>{this.state.ilosc}</div>
+                        <div>{this.state.count}</div>
+                    {this.state.count > 1 ? 
                     <ArrowDown onClick={() => changeSum(-1)} style={{width:"40px", height:"40px"}}/>
-                </div>
+                    :
+                    <Cross onClick={() => changeSum(-1)} style={{marginTop: "6px", marginLeft: "1px",fill: "red",width:"20px", height:"20px"}}/>
+                }
+                    </div>
 
             </div>
         )

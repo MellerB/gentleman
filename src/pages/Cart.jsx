@@ -1,7 +1,6 @@
 import React from "react"
 import PurchaseListItem from "../components/PurchaseListItem";
 import { indexedProducts } from "../data/products"
-import { addItem } from "../data/cookieManager"
 
 
 export default class Cart extends React.Component {
