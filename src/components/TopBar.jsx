@@ -10,7 +10,7 @@ class TopBar extends React.Component {
       return (
         <div style={{height: "80px", zIndex: "10"}} >
           
-          <nav style={{zIndex: "10",position: "fixed",left:"0px", top:"0px", right:"0px", width: "100%" ,height: "60px", backgroundColor: "#eeeedf"}}>
+          <nav style={{zIndex: "10",position: "fixed",left:"0px", top:"0px", right:"0px", width: "100%" ,height: "60px", backgroundColor: "#eeeedf",boxShadow:"0px 3px 10px grey"}}>
             <ul style={{marginTop: "0px", marginLeft: "calc(50% - 150px)"}}>
             <NavListItem onClick={() => this.props.history.push('/')} text="Home"/>
 
