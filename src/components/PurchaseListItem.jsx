@@ -39,12 +39,18 @@ export default class PurchaseListItem extends React.Component {
                 </div>
 
                 <div style={{ float: "right", width: "20%", boder: "solid #C7A82B 2px", marginTop: "20px", textAlign:"center"}}>
-                    <ArrowDown onClick={this.add} style={{width:"40px", height:"40px",transform: "rotate(180deg)"}}/>
+                    <div className="clickable-icon">
+                        <ArrowDown onClick={this.add} style={{width:"40px", height:"40px",transform: "rotate(180deg)"}}/>
+                    </div>
+                    
                         <div>{this.state.count}</div>
                     {this.state.count > 1 ? 
-                    <ArrowDown onClick={this.remove} style={{width:"40px", height:"40px"}}/>
+                    <div className="clickable-icon">
+                        <ArrowDown onClick={this.remove} style={{width:"40px", height:"40px"}}/>
+                    </div>
+                    
                     :
-                    <Cross onClick={this.remove} style={{marginTop: "6px", marginLeft: "1px",fill: "red",width:"20px", height:"20px"}}/>
+                    <Cross onClick={this.remove} style={{marginTop: "10px", marginLeft: "1px",fill: "red",width:"20px", height:"20px"}}/>
                 }
                     </div>
 
