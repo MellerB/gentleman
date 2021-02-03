@@ -21,7 +21,18 @@ export default class CartOrderData extends React.Component {
         }
     }
 
+    getSum = () =>
+    {
+        if(this.props.sum < 400)
+        {
+            return this.props.sum+20
+        }
+        return this.props.sum
+    }
+
+
     render() {
+
         return (
             <div style={{ width: "40%", right: "10%", border: "solid #C7A82B 2px", padding: "15px 15px 15px 15px", backgroundColor: "#eeeedf", position: "fixed" }}>
                 <div style={{ border: "solid #C7A82B 1px", padding: " 15px" }}>
@@ -30,8 +41,8 @@ export default class CartOrderData extends React.Component {
                     
                 
                     <h4>Cena za produkty: <span>{this.props.sum}</span></h4>
-                    <h4>Koszt wysyłki: {this.props.sum>400?<span style={{color:"green"}}>Gratis!!!</span>:<span style={{}}>20 zł</span>} </h4>
-                    <h4>Suma: <span>{this.props.sum>400?<span>{this.props.sum}</span>:<span>{this.props.sum+20}</span>}</span></h4>
+                    <h4>Koszt wysyłki: {this.props.sum > 400 ? <span style={{color:"green"}}>Gratis!!!</span>:<span style={{}}>20 zł</span>} </h4>
+                    <h4>Suma: <span>{this.getSum()}</span></h4>
                 </div>
 
                 <div style={{ border: "solid #C7A82B 1px", padding: " 15px", lineHeight:"200%", marginTop:"15px"}}>
@@ -48,7 +59,7 @@ export default class CartOrderData extends React.Component {
                         <a>Kod pocztowy<input onInput={this.checkifDigits} type="text" placeholder="XX" maxlength="2" size="1"/>-<input onInput={this.checkifDigits} type="text" placeholder="XXX" maxlength="3" size="1"/></a><br/>
                         <a>Ulica<input type="text" placeholder="Mickiewicza" /></a><br/>
                         <a>Nr domu/mieszkania<input onInput={this.checkifDigits} type="text" placeholder="dom" size="1"/>/<input onInput={this.checkifDigits} type="text" placeholder="lokal" size="1" /></a>
-                        <button onClick={console.log(this.items)} style={{float:"right",backgroundColor: "black",color:"white",borderRadius:"5px"}}>Zamawiam!</button>
+                        <button onClick={() => console.log(`pobrano ${this.getSum()} zł z Twojej karty bankowej`)} style={{float:"right",backgroundColor: "black",color:"white",borderRadius:"5px"}}>Zamawiam!</button>
                     </div>
                     
                 </div>
