@@ -32,7 +32,7 @@ export default class PurchaseListItem extends React.Component {
         return (
             <div style={{ height: "140px", margin: "10px", border: "solid #C7A82B 2px", backgroundColor: "#eeeedf",display:"flex"}}>
                 <img style={{ float: "left", height: "100%", width: "15%", backgroundColor: "#eeeedf", borderRight: "solid #C7A82B 2px", objectFit: "cover" }} src={item.imageURL} alt="noice whiskey" />
-                <div class="product" style={{ paddingLeft: "5px", float: "left", height: "100%", width: "60%", color: "rgb(143, 86, 100)" }}>
+                <div class="product" style={{ paddingLeft: "5px", float: "left", height: "100%", width: "80%", color: "rgb(143, 86, 100)" }}>
                     <h3>{item.name} </h3>
                     <h4 style={{ margin: "5px" }}>cena za sztukę: {item.price} zł</h4>
                     <h4 style={{ margin: "5px" }}>cena w sumie: <span id="suma">{this.state.count * item.price}</span> zł</h4>

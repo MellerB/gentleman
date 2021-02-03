@@ -46,9 +46,11 @@ export default class CartOrderData extends React.Component {
                         <b>Adres:</b> <br />
                         <a>Miasto<input type="text" placeholder="Warszawa" /></a><br/>
                         <a>Kod pocztowy<input onInput={this.checkifDigits} type="text" placeholder="XX" maxlength="2" size="1"/>-<input onInput={this.checkifDigits} type="text" placeholder="XXX" maxlength="3" size="1"/></a><br/>
+                        
                         <a>Ulica<input type="text" placeholder="Mickiewicza" /></a><br/>
+                        <button onClick={console.log(this.items)} style={{height:"30px",float:"right",backgroundColor: "black",color:"white",borderRadius:"5px"}}>Zamawiam!</button>
                         <a>Nr domu/mieszkania<input onInput={this.checkifDigits} type="text" placeholder="dom" size="1"/>/<input onInput={this.checkifDigits} type="text" placeholder="lokal" size="1" /></a>
-                        <button onClick={console.log(this.items)} style={{float:"right",backgroundColor: "black",color:"white",borderRadius:"5px"}}>Zamawiam!</button>
+                        
                     </div>
                     
                 </div>
