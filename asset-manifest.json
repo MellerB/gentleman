@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/gentleman/static/css/main.18433ee9.chunk.css",
-    "main.js": "/gentleman/static/js/main.f23fd7e4.chunk.js",
-    "main.js.map": "/gentleman/static/js/main.f23fd7e4.chunk.js.map",
+    "main.css": "/gentleman/static/css/main.47f67257.chunk.css",
+    "main.js": "/gentleman/static/js/main.5304a893.chunk.js",
+    "main.js.map": "/gentleman/static/js/main.5304a893.chunk.js.map",
     "runtime-main.js": "/gentleman/static/js/runtime-main.3458d5ec.js",
     "runtime-main.js.map": "/gentleman/static/js/runtime-main.3458d5ec.js.map",
     "static/js/2.5379dcb8.chunk.js": "/gentleman/static/js/2.5379dcb8.chunk.js",
     "static/js/2.5379dcb8.chunk.js.map": "/gentleman/static/js/2.5379dcb8.chunk.js.map",
     "index.html": "/gentleman/index.html",
-    "static/css/main.18433ee9.chunk.css.map": "/gentleman/static/css/main.18433ee9.chunk.css.map",
+    "static/css/main.47f67257.chunk.css.map": "/gentleman/static/css/main.47f67257.chunk.css.map",
     "static/js/2.5379dcb8.chunk.js.LICENSE.txt": "/gentleman/static/js/2.5379dcb8.chunk.js.LICENSE.txt",
     "static/media/Arrow-down.1f4ea4d9.svg": "/gentleman/static/media/Arrow-down.1f4ea4d9.svg",
     "static/media/cross.cb3a473b.svg": "/gentleman/static/media/cross.cb3a473b.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.3458d5ec.js",
     "static/js/2.5379dcb8.chunk.js",
-    "static/css/main.18433ee9.chunk.css",
-    "static/js/main.f23fd7e4.chunk.js"
+    "static/css/main.47f67257.chunk.css",
+    "static/js/main.5304a893.chunk.js"
   ]
 }
