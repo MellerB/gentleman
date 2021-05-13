@@ -15,9 +15,9 @@ export default class ProductListItem extends React.Component {
         }
 
     return (
-        <div style={{height: "200px", margin: "10px",  border: "solid #C7A82B 2px",backgroundColor:"#eeeedf"}}>
+        <div style={{height: "200px", margin: "10px",  border: "solid #C7A82B 2px",backgroundColor:"#eeeedf44"}}>
         <img style={{float: "left", height: "100%", width: "15%", backgroundColor: "#eeeedf", borderRight: "solid #C7A82B 2px", objectFit: "cover"}} src={item.imageURL} alt="noice whiskey"/> 
-        <div class="product" style={{paddingLeft: "5px",float: "left",height:"100%", width: "60%",color:"rgb(143, 86, 100)"}}>
+        <div class="product" style={{paddingLeft: "5px",float: "left",height:"100%", width: "60%",color:"#C7A82B",webkitTextStroke:"1.2px black"}}>
             <h2>{item.name} </h2>
             <h3 style={{margin: "5px"}}>typ: {item.type}</h3>
             <h3 style={{margin: "5px"}}>kraj pochodzenia: {item.origin}</h3>
